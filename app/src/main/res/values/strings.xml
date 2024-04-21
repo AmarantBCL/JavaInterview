@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Java Interview</string>
+
+    <string name="category_basics">Basics</string>
+    <string name="category_oop">OOP</string>
+
+    <string name="header_equals_and_hashcode">Equals and hashCode</string>
+    <string name="header_static_members">Static members and static modifier</string>
+
+    <string name="desc_equals_and_hashcode">What are the rules for equals and hashCode methods?</string>
+    <string name="desc_static_members">What is the difference between static and non-static fields?</string>
+
+    <string name="answer_equals_and_hashcode">If you override equals, you should also override hashCode.\n\nIf hash codes are different, the objects are definitely different.\n\nIf hash codes are the same, the objects may still be different.</string>
+    <string name="answer_static_members">Static fields and methods are associated with the class in which they are declared. You don\'t need to create an object (instance of a class) to refer to them.\nNon-static class members are associated with an object, so you must create an instance of a class to refer to them.</string>
 </resources>

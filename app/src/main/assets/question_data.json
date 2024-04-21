@@ -1,0 +1,16 @@
+[
+  {
+    "id": 0,
+    "categoryId": 0,
+    "header": "header_equals_and_hashcode",
+    "description": "desc_equals_and_hashcode",
+    "answer": "answer_equals_and_hashcode"
+  },
+  {
+    "id": 1,
+    "categoryId": 1,
+    "header": "header_static_members",
+    "description": "desc_static_members",
+    "answer": "answer_static_members"
+  }
+]

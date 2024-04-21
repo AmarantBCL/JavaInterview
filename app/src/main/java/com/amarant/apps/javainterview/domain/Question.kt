@@ -6,5 +6,5 @@ data class Question(
     val header: String,
     val description: String,
     val answer: String,
-    var isAnswered: Boolean
+    var isAnswered: Boolean = false
 )
