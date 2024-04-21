@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 
 interface AppRepository {
 
-    fun getAllCategories(): LiveData<Category>
+    fun getAllCategories(): LiveData<List<Category>>
 
-    fun getQuestionByCategory(id: Int): LiveData<Question>
+    fun getQuestionByCategory(id: Int): LiveData<List<Question>>
 }

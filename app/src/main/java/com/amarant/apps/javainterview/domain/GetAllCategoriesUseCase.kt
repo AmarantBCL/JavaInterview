@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 
 class GetAllCategoriesUseCase(private val repository: AppRepository) {
 
-    operator fun invoke(): LiveData<Category> {
+    operator fun invoke(): LiveData<List<Category>> {
         return repository.getAllCategories()
     }
 }

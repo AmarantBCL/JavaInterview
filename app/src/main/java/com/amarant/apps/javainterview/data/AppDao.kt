@@ -8,8 +8,8 @@ import androidx.room.Query
 interface AppDao {
 
     @Query("SELECT * FROM categories")
-    fun getAllCategories(): LiveData<CategoryDbModel>
+    fun getAllCategories(): LiveData<List<CategoryDbModel>>
 
     @Query("SELECT * FROM questions WHERE categoryId = :id")
-    fun getQuestionsByCategory(id: Int): LiveData<QuestionDbModel>
+    fun getQuestionsByCategory(id: Int): LiveData<List<QuestionDbModel>>
 }
