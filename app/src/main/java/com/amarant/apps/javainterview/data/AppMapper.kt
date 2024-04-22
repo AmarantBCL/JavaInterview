@@ -20,8 +20,7 @@ class AppMapper {
     private fun mapCategoryDbModelToEntity(model: CategoryDbModel): Category {
         return Category(
             model.id,
-            model.title,
-            model.numberOfQuestions
+            model.title
         )
     }
 

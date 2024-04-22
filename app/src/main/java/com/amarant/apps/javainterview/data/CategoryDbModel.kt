@@ -8,6 +8,5 @@ data class CategoryDbModel(
 
     @PrimaryKey(autoGenerate = true)
     val id: Int,
-    val title: String,
-    val numberOfQuestions: Int
+    val title: String
 )
