@@ -20,7 +20,7 @@ class MainViewModel(private val application: Application) : ViewModel() {
         return getAllCategoriesUseCase()
     }
 
-    fun getAllCategories(id: Int): LiveData<List<Question>> {
+    fun getQuestionsByCategory(id: Int): LiveData<List<Question>> {
         return getQuestionsByCategoryUseCase(id)
     }
 }
