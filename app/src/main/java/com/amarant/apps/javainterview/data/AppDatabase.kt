@@ -6,6 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.sqlite.db.SupportSQLiteStatement
+import com.amarant.apps.javainterview.domain.ProgressColor
 import com.amarant.apps.javainterview.presentation.JavaInterviewApp
 import com.google.gson.Gson
 
@@ -22,7 +23,7 @@ abstract class AppDatabase : RoomDatabase() {
         private const val DATA_FILE_NAME_CATEGORIES = "category_data.json"
         private const val DATA_FILE_NAME_QUESTIONS = "question_data.json"
         private const val INSERT_QUERY_CATEGORIES = "INSERT INTO categories (id, title) VALUES (?, ?)"
-        private const val INSERT_QUERY_QUESTIONS = "INSERT INTO questions (id, categoryId, header, description, answer, isAnswered) VALUES (?, ?, ?, ?, ?, ?)"
+        private const val INSERT_QUERY_QUESTIONS = "INSERT INTO questions (id, categoryId, header, description, answer, isAnswered, progressColor) VALUES (?, ?, ?, ?, ?, ?, ?)"
 
         fun getInstance(application: Application): AppDatabase {
             INSTANCE?.let {
@@ -82,6 +83,7 @@ abstract class AppDatabase : RoomDatabase() {
                         insertStatement.bindString(4, element.description)
                         insertStatement.bindString(5, element.answer)
                         insertStatement.bindLong(6, 0.toLong())
+                        insertStatement.bindLong(7, 0.toLong())
                         insertStatement.executeInsert()
                     }
                     db.setTransactionSuccessful()

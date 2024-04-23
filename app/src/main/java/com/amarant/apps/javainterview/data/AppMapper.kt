@@ -1,6 +1,7 @@
 package com.amarant.apps.javainterview.data
 
 import com.amarant.apps.javainterview.domain.Category
+import com.amarant.apps.javainterview.domain.ProgressColor
 import com.amarant.apps.javainterview.domain.Question
 
 class AppMapper {
@@ -31,7 +32,8 @@ class AppMapper {
             model.header,
             model.description,
             model.answer,
-            model.isAnswered
+            model.isAnswered,
+            ProgressColor.fromId(model.progressColor)
         )
     }
 }

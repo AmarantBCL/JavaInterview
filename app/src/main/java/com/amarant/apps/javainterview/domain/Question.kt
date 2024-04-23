@@ -6,5 +6,6 @@ data class Question(
     val header: String,
     val description: String,
     val answer: String,
-    var isAnswered: Boolean = false
+    var isAnswered: Boolean = false,
+    var progressColor: ProgressColor = ProgressColor.DIFFICULT
 )
