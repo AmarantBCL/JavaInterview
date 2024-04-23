@@ -1,6 +1,7 @@
 package com.amarant.apps.javainterview.data
 
 import androidx.room.Entity
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "categories")

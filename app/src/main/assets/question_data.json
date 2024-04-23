@@ -2,9 +2,9 @@
   {
     "id": 0,
     "categoryId": 0,
-    "header": "header_equals_and_hashcode",
-    "description": "desc_equals_and_hashcode",
-    "answer": "answer_equals_and_hashcode"
+    "header": "header_equals_and_hashcode_rules",
+    "description": "desc_equals_and_hashcode_rules",
+    "answer": "answer_equals_and_hashcode_rules"
   },
   {
     "id": 1,
@@ -12,5 +12,19 @@
     "header": "header_static_members",
     "description": "desc_static_members",
     "answer": "answer_static_members"
+  },
+  {
+    "id": 2,
+    "categoryId": 0,
+    "header": "header_equals_and_hashcode",
+    "description": "desc_equals_and_hashcode",
+    "answer": "answer_equals_and_hashcode"
+  },
+  {
+    "id": 3,
+    "categoryId": 0,
+    "header": "header_equals_and_hashcode_override",
+    "description": "desc_equals_and_hashcode_override",
+    "answer": "answer_equals_and_hashcode_override"
   }
 ]

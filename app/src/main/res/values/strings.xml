@@ -4,13 +4,19 @@
     <string name="category_basics">Basics</string>
     <string name="category_oop">OOP</string>
 
-    <string name="header_equals_and_hashcode">Equals and hashCode</string>
+    <string name="header_equals_and_hashcode_rules">Equals and hashCode</string>
     <string name="header_static_members">Static members and static modifier</string>
+    <string name="header_equals_and_hashcode">Equals and hashCode</string>
+    <string name="header_equals_and_hashcode_override">Equals and hashCode</string>
 
-    <string name="desc_equals_and_hashcode">What are the rules for equals and hashCode methods?</string>
+    <string name="desc_equals_and_hashcode_rules">What are the rules for equals and hashCode methods?</string>
     <string name="desc_static_members">What is the difference between static and non-static fields?</string>
+    <string name="desc_equals_and_hashcode">What are the equals and hashCode methods used for and why are they needed?</string>
+    <string name="desc_equals_and_hashcode_override">What will happen if you override equals and don\'t override hashCode?</string>
 
-    <string name="answer_equals_and_hashcode">If you override equals, you should also override hashCode.\n\nIf hash codes are different, the objects are definitely different.\n\nIf hash codes are the same, the objects may still be different.</string>
+    <string name="answer_equals_and_hashcode_rules">If you override equals, you should also override hashCode.\n\nIf hash codes are different, the objects are definitely different.\n\nIf hash codes are the same, the objects may still be different.</string>
     <string name="answer_static_members">Static fields and methods are associated with the class in which they are declared. You don\'t need to create an object (instance of a class) to refer to them.\nNon-static class members are associated with an object, so you must create an instance of a class to refer to them.</string>
+    <string name="answer_equals_and_hashcode">These are methods inherited from the Object class, which is the superclass for all other classes in Java. The equals method is used to compare objects based on their field values, while the hashCode method returns an integer value that represents an object. The hashCode value is utilized in HashSet and HashMap collections to determine the position of an element within a hash table.</string>
+    <string name="answer_equals_and_hashcode_override">Before comparing objects using the equals method, Java collections typically use the hashCode method to optimize comparisons. If two objects have different hash codes, they are considered different without even invoking the equals method.</string>
 
 </resources>
