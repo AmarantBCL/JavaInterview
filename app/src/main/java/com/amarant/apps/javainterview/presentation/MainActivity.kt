@@ -16,19 +16,16 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val mainViewModel: MainViewModel by lazy {
-        ViewModelProvider(this, ViewModelFactory(application))[MainViewModel::class.java]
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        navigateToCategoryFragment()
+    }
+
+    private fun navigateToCategoryFragment() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.container, CategoryFragment())
             .commit()
-        mainViewModel.getAllCategories().observe(this) {
-
-        }
     }
 }

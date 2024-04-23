@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
 import com.amarant.apps.javainterview.R
 import com.amarant.apps.javainterview.databinding.FragmentCategoryBinding
@@ -28,7 +29,7 @@ class CategoryFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentCategoryBinding.inflate(inflater)
         return binding.root
     }
@@ -42,11 +43,27 @@ class CategoryFragment : Fragment() {
     private fun initRecyclerView() {
         adapter = CategoryAdapter()
         binding.rwCategories.adapter = adapter
+        adapter.onCategoryClickListener = {
+            navigateToQuestionFragment(it.id)
+        }
     }
 
     private fun observeViewModel() {
         mainViewModel.getAllCategories().observe(viewLifecycleOwner) {
             adapter.submitList(it)
         }
+    }
+
+    private fun navigateToQuestionFragment(id: Int) {
+        requireActivity().supportFragmentManager.beginTransaction()
+            .setCustomAnimations(
+                R.anim.slide_in,
+                R.anim.slide_out,
+                R.anim.slide_in_right,
+                R.anim.slide_out_left
+            )
+            .replace(R.id.container, QuestionFragment.newInstance(id))
+            .addToBackStack(null)
+            .commit()
     }
 }

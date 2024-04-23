@@ -1,5 +1,6 @@
 package com.amarant.apps.javainterview.presentation
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -10,6 +11,8 @@ import com.amarant.apps.javainterview.domain.Category
 
 class CategoryAdapter :
     ListAdapter<Category, CategoryAdapter.CategoryViewHolder>(CategoryDiffCallback()) {
+
+    var onCategoryClickListener: ((Category) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
         val binding =
@@ -22,7 +25,10 @@ class CategoryAdapter :
         val context = holder.itemView.context
         val stringResId = context.resources.getIdentifier(item.title, "string", context.packageName)
         holder.binding.tvTitle.text = context.resources.getString(stringResId)
-        holder.binding.tvProgress.text = "${item.numberOfQuestions}/${item.maxQuestions}" // TODO Correct number of questions
+        holder.binding.tvProgress.text = "${item.numberOfQuestions}/${item.maxQuestions}"
+        holder.binding.constraint.setOnClickListener {
+            onCategoryClickListener?.invoke(item)
+        }
     }
 
     class CategoryViewHolder(val binding: ListItemCategoryBinding) :
