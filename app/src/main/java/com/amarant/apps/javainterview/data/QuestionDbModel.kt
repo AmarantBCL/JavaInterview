@@ -2,7 +2,6 @@ package com.amarant.apps.javainterview.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.amarant.apps.javainterview.domain.ProgressColor
 
 @Entity(tableName = "questions")
 data class QuestionDbModel(

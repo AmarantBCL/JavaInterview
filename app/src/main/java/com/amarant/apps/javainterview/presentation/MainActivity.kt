@@ -25,15 +25,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun navigateToCategoryFragment() {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.container, CategoryFragment())
-            .commit()
+        if (supportFragmentManager.findFragmentById(R.id.container) == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.container, CategoryFragment())
+                .commit()
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
-                onBackPressed()
+                onBackPressedDispatcher.onBackPressed()
                 return true
             }
         }

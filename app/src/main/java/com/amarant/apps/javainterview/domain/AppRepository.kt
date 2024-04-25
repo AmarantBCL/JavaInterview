@@ -7,4 +7,6 @@ interface AppRepository {
     fun getAllCategories(): LiveData<List<Category>>
 
     fun getQuestionByCategory(id: Int): LiveData<List<Question>>
+
+    suspend fun setQuestionAnswered(question: Question)
 }

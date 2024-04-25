@@ -18,6 +18,18 @@ class AppMapper {
         }
     }
 
+    fun mapQuestionToDbModel(entity: Question): QuestionDbModel {
+        return QuestionDbModel(
+            entity.id,
+            entity.categoryId,
+            entity.header,
+            entity.description,
+            entity.answer,
+            entity.isAnswered,
+            entity.progressColor.id
+        )
+    }
+
     private fun mapCategoryDbModelToEntity(model: CategoryDbModel): Category {
         return Category(
             model.id,

@@ -26,5 +26,12 @@
     "header": "header_equals_and_hashcode_override",
     "description": "desc_equals_and_hashcode_override",
     "answer": "answer_equals_and_hashcode_override"
+  },
+  {
+    "id": 4,
+    "categoryId": 2,
+    "header": "header_generics",
+    "description": "desc_generics",
+    "answer": "answer_generics"
   }
 ]

@@ -47,4 +47,10 @@ class AppRepositoryImpl(private val application: Application) : AppRepository {
             mapper.mapQuestionDbModelListToEntityList(it)
         }
     }
+
+    override suspend fun setQuestionAnswered(question: Question) {
+        CoroutineScope(Dispatchers.IO).launch {
+            dao.setQuestionAnswered(mapper.mapQuestionToDbModel(question))
+        }
+    }
 }

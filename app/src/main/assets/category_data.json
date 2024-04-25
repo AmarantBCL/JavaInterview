@@ -6,5 +6,9 @@
   {
     "id": 1,
     "title": "category_oop"
+  },
+  {
+    "id": 2,
+    "title": "category_generics"
   }
 ]
