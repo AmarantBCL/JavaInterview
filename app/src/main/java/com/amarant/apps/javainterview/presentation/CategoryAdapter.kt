@@ -2,6 +2,7 @@ package com.amarant.apps.javainterview.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -23,6 +24,9 @@ class CategoryAdapter :
         val item = getItem(position)
         val context = holder.itemView.context
         val stringResId = context.resources.getIdentifier(item.title, "string", context.packageName)
+        val iconName = item.title.replace("category_", "ic_")
+        val imageResId = context.resources.getIdentifier(iconName, "drawable", context.packageName)
+        holder.binding.imgCategory.setImageResource(imageResId)
         holder.binding.tvTitle.text = context.resources.getString(stringResId)
         holder.binding.tvProgress.text = "${item.numberOfQuestions}/${item.maxQuestions}"
         holder.binding.constraint.setOnClickListener {
