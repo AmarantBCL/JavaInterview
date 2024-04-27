@@ -9,4 +9,6 @@ interface AppRepository {
     fun getQuestionByCategory(id: Int): LiveData<List<Question>>
 
     suspend fun setQuestionAnswered(question: Question)
+
+    suspend fun switchQuestionProgress(question: Question)
 }

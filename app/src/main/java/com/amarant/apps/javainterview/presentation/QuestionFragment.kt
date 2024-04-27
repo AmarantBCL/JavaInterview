@@ -73,6 +73,9 @@ class QuestionFragment : Fragment() {
                 isAnswered = !it.isAnswered
             ))
         }
+        adapter.onLongQuestionClickListener = {
+            mainViewModel.switchQuestionProgress(it)
+        }
     }
 
     private fun observeViewModel() {

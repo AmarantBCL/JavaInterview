@@ -23,4 +23,7 @@ interface AppDao {
 
     @Update
     fun setQuestionAnswered(question: QuestionDbModel)
+
+    @Update
+    fun switchQuestionProgress(question: QuestionDbModel)
 }

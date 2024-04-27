@@ -3,6 +3,7 @@
     <style name="Base.Theme.JavaInterview" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/black</item>
         <item name="colorOnPrimary">@color/pale</item>
+        <item name="colorSecondary">@color/black</item>
 
         <item name="android:statusBarColor">@color/black</item>
     </style>

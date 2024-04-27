@@ -53,4 +53,10 @@ class AppRepositoryImpl(private val application: Application) : AppRepository {
             dao.setQuestionAnswered(mapper.mapQuestionToDbModel(question))
         }
     }
+
+    override suspend fun switchQuestionProgress(question: Question) {
+        CoroutineScope(Dispatchers.IO).launch {
+            dao.switchQuestionProgress(mapper.mapQuestionToDbModel(question))
+        }
+    }
 }
