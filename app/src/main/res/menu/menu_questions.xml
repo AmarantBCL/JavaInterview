@@ -6,4 +6,10 @@
         android:icon="@drawable/ic_sort"
         android:title="@string/sort"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/sort2"
+        android:icon="@drawable/ic_sort"
+        android:title="@string/sort"
+        app:showAsAction="always" />
 </menu>

@@ -11,6 +11,7 @@ import com.amarant.apps.javainterview.R
 import com.amarant.apps.javainterview.databinding.ActivityMainBinding
 import com.amarant.apps.javainterview.domain.Category
 import com.amarant.apps.javainterview.domain.Question
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.gson.Gson
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +22,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        initActionBar()
         navigateToCategoryFragment()
+    }
+
+    private fun initActionBar() {
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
     }
 
     private fun navigateToCategoryFragment() {

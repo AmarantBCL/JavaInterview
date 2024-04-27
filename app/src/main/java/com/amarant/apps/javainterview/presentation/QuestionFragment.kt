@@ -38,6 +38,7 @@ class QuestionFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         categoryId = requireArguments().getInt(KEY_CATEGORY_ID)
+        setHasOptionsMenu(true)
     }
 
     override fun onCreateView(
@@ -45,7 +46,6 @@ class QuestionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentQuestionBinding.inflate(inflater)
-        setHasOptionsMenu(true)
         return binding.root
     }
 
